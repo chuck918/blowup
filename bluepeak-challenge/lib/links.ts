@@ -11,12 +11,16 @@
  */
 
 const SITE_ORIGIN =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://blowupchallenge.com";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "";
 
-export const PAYSTACK_URL = `https://paystack.shop/pay/74ysd3qw4-?redirect_url=${encodeURIComponent(
-  `${SITE_ORIGIN}/thank-you`
-)}`;
+const PAYSTACK_PAY_URL =
+  process.env.NEXT_PUBLIC_PAYSTACK_PAY_URL || "";
+  
+export const PAYSTACK_URL = PAYSTACK_PAY_URL
+  ? `${PAYSTACK_PAY_URL}?redirect_url=${encodeURIComponent(
+      `${SITE_ORIGIN}/thank-you`
+    )}`
+  : "";
 
-export const GOOGLE_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScNxrpienMzI_kvFutwZ6gOEpCeo7dKVJwlueoTUQpK0Vxesw/viewform?usp=sharing&ouid=116088014118637590493";
+export const GOOGLE_FORM_URL = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || "";
+

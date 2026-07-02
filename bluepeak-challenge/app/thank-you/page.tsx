@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
-const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScNxrpienMzI_kvFutwZ6gOEpCeo7dKVJwlueoTUQpK0Vxesw/viewform?usp=sharing&ouid=116088014118637590493";
+import { GOOGLE_FORM_URL as FORM_URL } from "@/lib/links";
 
 const COUNTDOWN_SECONDS = 300;
 
@@ -12,7 +10,7 @@ export default function ThankYou() {
   const [seconds, setSeconds] = useState(COUNTDOWN_SECONDS);
 
   useEffect(() => {
-    if (seconds <= 0) {
+    if (seconds <= 0 && FORM_URL) {
       window.location.href = FORM_URL;
       return;
     }
