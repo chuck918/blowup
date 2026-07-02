@@ -4,7 +4,6 @@ import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
 import WhyJoin from "@/components/WhyJoin";
-import Prizes from "@/components/Prizes";
 import Timeline from "@/components/Timeline";
 import FAQ from "@/components/FAQ";
 import Sponsors from "@/components/Sponsors";
@@ -21,7 +20,6 @@ export default function Home() {
         <HowItWorks />
         <Pricing />
         <WhyJoin />
-        <Prizes />
         <Timeline />
         <FAQ />
         <Sponsors />

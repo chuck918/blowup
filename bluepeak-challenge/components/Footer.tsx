@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PAYSTACK_URL } from "@/lib/links";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -25,7 +26,7 @@ export default function Footer() {
               Showcasing bold ideas and rewarding excellence across Ghana and beyond.
             </p>
             <a
-              href="https://paystack.com/pay/blowup-competition"
+              href={PAYSTACK_URL}
               target="_blank"
               rel="noopener"
               className="inline-flex mt-6 bg-amber-400 text-gray-900 font-bold text-sm px-5 py-2.5 rounded-full hover:bg-amber-300 transition-colors"
@@ -55,16 +56,16 @@ export default function Footer() {
               <li><Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">Terms &amp; Conditions</Link></li>
             </ul>
-            <div className="mt-8 pt-8 border-t border-white/10">
+            {/* <div className="mt-8 pt-8 border-t border-white/10">
               <div className="text-2xl font-black text-amber-400">Oct 15, 2026</div>
               <div className="text-gray-500 text-xs mt-1">Registration deadline</div>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-600">
           <span>© {new Date().getFullYear()} BlowUp Innovation Challenge. All rights reserved.</span>
-          <span>Built in Ghana</span>
+          <span>Designed and Built by Nazir</span>
         </div>
       </div>
     </footer>

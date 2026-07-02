@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { PAYSTACK_URL } from "@/lib/links";
 
 function fadeUp(delay = 0) {
   return {
@@ -33,7 +34,7 @@ export default function WhyJoin() {
               BlowUp is not just a competition - it is a launchpad for your future.
             </p>
             <a
-              href="https://paystack.com/pay/blowup-competition"
+              href={PAYSTACK_URL}
               target="_blank"
               rel="noopener"
               className="inline-flex mt-8 bg-[#1d4ed8] text-white font-semibold text-sm px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"

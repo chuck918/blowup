@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { PAYSTACK_URL } from "@/lib/links";
 
 function fadeUp(delay = 0) {
   return {
@@ -42,7 +43,7 @@ export default function Pricing() {
                 <p className="text-blue-200 text-sm mt-2">One-time · non-refundable</p>
               </div>
               <a
-                href="https://paystack.com/pay/blowup-competition"
+                href={PAYSTACK_URL}
                 target="_blank"
                 rel="noopener"
                 className="bg-amber-400 text-gray-900 font-bold text-sm px-5 py-2.5 rounded-full hover:bg-amber-300 transition-colors shrink-0"

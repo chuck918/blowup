@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { PAYSTACK_URL } from "@/lib/links";
 
 function fadeUp(delay = 0) {
   return {
@@ -48,13 +49,16 @@ export default function Contact() {
               <p className="text-blue-300 text-sm mb-2">Ready to compete?</p>
               <p className="text-blue-300 text-sm mb-8">One-time registration fee</p>
               <a
-                href="https://paystack.com/pay/blowup-competition"
+                href={PAYSTACK_URL}
                 target="_blank"
                 rel="noopener"
                 className="inline-flex items-center gap-2 bg-amber-400 text-gray-900 font-bold text-sm px-6 py-3 rounded-full hover:bg-amber-300 transition-colors"
               >
-                Buy Registration Form →
+                Pay &amp; Register →
               </a>
+              <p className="text-blue-300/70 text-xs mt-4">
+                You'll be redirected to the application form immediately after payment.
+              </p>
             </div>
 
             {/* Social */}

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { PAYSTACK_URL } from "@/lib/links";
 
 const links = [
   { href: "#about", label: "About" },
@@ -49,7 +50,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="https://paystack.com/pay/blowup-competition"
+          href={PAYSTACK_URL}
           target="_blank"
           rel="noopener"
           className={`hidden md:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-colors ${
@@ -92,7 +93,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://paystack.com/pay/blowup-competition"
+              href={PAYSTACK_URL}
               target="_blank"
               rel="noopener"
               className="mt-3 text-center bg-[#1d4ed8] text-white font-semibold text-sm px-5 py-3 rounded-full"

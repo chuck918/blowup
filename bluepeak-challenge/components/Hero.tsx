@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { PAYSTACK_URL } from "@/lib/links";
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -64,7 +65,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://paystack.com/pay/blowup-competition"
+              href={PAYSTACK_URL}
               target="_blank"
               rel="noopener"
               className="inline-flex items-center gap-2 bg-amber-400 text-gray-900 font-bold px-7 py-3.5 rounded-full text-sm hover:bg-amber-300 transition-colors"
