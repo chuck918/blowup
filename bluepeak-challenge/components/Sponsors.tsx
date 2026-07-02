@@ -22,7 +22,7 @@ export default function Sponsors() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
           <motion.div {...fadeUp(0)}>
             <p className="eyebrow mb-2">Sponsors &amp; Partners</p>
-            <h2 className="text-2xl font-black text-gray-900">Backed by industry leaders.</h2>
+            <h2 className="text-2xl font-black text-gray-900">Call us now.</h2>
           </motion.div>
           <motion.a
             {...fadeUp(0.1)}
@@ -32,7 +32,7 @@ export default function Sponsors() {
             Become a sponsor →
           </motion.a>
         </div>
-
+{/* 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {sponsors.map((s, i) => (
             <motion.div
@@ -43,7 +43,7 @@ export default function Sponsors() {
               {s}
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

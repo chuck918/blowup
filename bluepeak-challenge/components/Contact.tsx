@@ -47,7 +47,6 @@ export default function Contact() {
             {/* CTA card */}
             <div className="bg-[#1e3a8a] rounded-2xl p-10 text-white">
               <p className="text-blue-300 text-sm mb-2">Ready to compete?</p>
-              <p className="text-blue-300 text-sm mb-8">One-time registration fee</p>
               <a
                 href={PAYSTACK_URL}
                 target="_blank"
@@ -56,9 +55,6 @@ export default function Contact() {
               >
                 Pay &amp; Register →
               </a>
-              <p className="text-blue-300/70 text-xs mt-4">
-                You'll be redirected to the application form immediately after payment.
-              </p>
             </div>
 
             {/* Social */}

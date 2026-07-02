@@ -17,7 +17,7 @@ function getTimeLeft(target: Date) {
   };
 }
 
-const DEADLINE = new Date("2026-10-15T23:59:59");
+const DEADLINE = new Date("2026-08-23T23:59:59");
 
 export default function Hero() {
   const [time, setTime] = useState(() => getTimeLeft(DEADLINE));
@@ -40,17 +40,17 @@ export default function Hero() {
       style={{ background: "linear-gradient(160deg, #1e3a8a 0%, #1d4ed8 55%, #0f172a 100%)" }}
     >
       {/* Top meta bar */}
-      <div className="container pt-28 pb-0 flex items-center justify-between">
+      {/* <div className="container pt-28 pb-0 flex items-center justify-between">
         <span className="text-white/40 text-xs font-medium uppercase tracking-widest">Ghana · 2026</span>
         <span className="text-white/40 text-xs font-medium">Open for Registration</span>
-      </div>
+      </div> */}
 
       {/* Hero body */}
       <div className="container flex-1 flex flex-col justify-center py-16">
         <div className="max-w-3xl">
-          <p className="text-amber-400 text-sm font-semibold mb-5 tracking-wide">
+          {/* <p className="text-amber-400 text-sm font-semibold mb-5 tracking-wide">
             BlowUp Innovation Challenge
-          </p>
+          </p> */}
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-8">
             Compete.<br />
@@ -58,10 +58,10 @@ export default function Hero() {
             Win Big.
           </h1>
 
-          <p className="text-blue-200 text-lg leading-relaxed max-w-xl mb-10">
+          {/* <p className="text-blue-200 text-lg leading-relaxed max-w-xl mb-10">
             A national platform for bold ideas - open to startups, technologists,
             artists, and youth changemakers across Ghana.
-          </p>
+          </p> */}
 
           <div className="flex flex-wrap gap-3">
             <a
@@ -87,10 +87,10 @@ export default function Hero() {
         <div className="container py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           {/* Stats */}
           <div className="flex items-center gap-8">
-            <div>
+            {/* <div>
               <div className="text-2xl font-black text-white">GHS 9,500+</div>
               <div className="text-white/40 text-xs mt-0.5">Total prize pool</div>
-            </div>
+            </div> */}
             <div className="w-px h-8 bg-white/10" />
             <div>
               <div className="text-2xl font-black text-white">3</div>
@@ -98,7 +98,7 @@ export default function Hero() {
             </div>
             <div className="w-px h-8 bg-white/10" />
             <div>
-              <div className="text-2xl font-black text-amber-400">Oct 15</div>
+              <div className="text-2xl font-black text-amber-400">Aug 23</div>
               <div className="text-white/40 text-xs mt-0.5">Deadline 2026</div>
             </div>
           </div>

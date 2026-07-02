@@ -18,7 +18,7 @@ const included = [
   "Certificate of participation",
 ];
 
-const paymentMethods = ["MTN Mobile Money", "Telecel Cash", "Visa", "Mastercard"];
+const paymentMethods = ["MTN Mobile Money", "Telecel Cash", "Visa", "Mastercard", "Airtel Tigo Money"];
 
 export default function Pricing() {
   return (
@@ -27,7 +27,7 @@ export default function Pricing() {
         <motion.div {...fadeUp(0)} className="mb-14">
           <p className="eyebrow mb-4">Registration</p>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
-            One fee.<br />Everything included.
+            One fee.<br/>Everything included.
           </h2>
         </motion.div>
 
@@ -40,7 +40,7 @@ export default function Pricing() {
             <div className="flex items-start justify-between mb-8">
               <div>
                 <span className="text-blue-300 text-xs font-semibold uppercase tracking-widest">Registration fee</span>
-                <p className="text-blue-200 text-sm mt-2">One-time · non-refundable</p>
+                {/* <p className="text-blue-200 text-sm mt-2">One-time · non-refundable</p> */}
               </div>
               <a
                 href={PAYSTACK_URL}
@@ -85,7 +85,7 @@ export default function Pricing() {
             <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">After payment</p>
               <div className="space-y-3">
-                {["Payment confirmed", "Access Thank You page", "Complete Google Form", "Registration submitted"].map(
+                {["Payment confirmed", "Wait for admission"].map(
                   (step, i) => (
                     <div key={step} className="flex items-center gap-3 text-sm text-gray-600">
                       <span className="w-5 h-5 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-[10px] font-bold shrink-0">
@@ -98,7 +98,7 @@ export default function Pricing() {
               </div>
             </div>
 
-            <p className="text-xs text-gray-400 text-center">Deadline: <strong className="text-gray-600">15 October 2026</strong></p>
+            <p className="text-xs text-gray-400 text-center">Deadline: <strong className="text-gray-600">23rd August 2026</strong></p>
           </motion.div>
         </div>
       </div>

@@ -14,21 +14,16 @@ function fadeUp(delay = 0) {
 const steps = [
   {
     num: "01",
+    title: "Fill the Form",
+    desc: "Complete your profile, choose a category.",
+  },
+  {
+    num: "02",
     title: "Pay the fee",
     desc: "Pay via Mobile Money, Visa, or Mastercard through our secure payment gateway.",
   },
   {
-    num: "02",
-    title: "Get your reference",
-    desc: "You'll receive instant payment confirmation and a unique reference number.",
-  },
-  {
     num: "03",
-    title: "Fill the Google Form",
-    desc: "Complete your profile, choose a category, and submit your project details.",
-  },
-  {
-    num: "04",
     title: "Await confirmation",
     desc: "Our team reviews every application and notifies you of your participation status.",
   },
@@ -42,7 +37,7 @@ export default function HowItWorks() {
           <motion.div {...fadeUp(0)}>
             <p className="eyebrow mb-4">How it works</p>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
-              Four steps<br />to enter.
+              Three steps<br />to enter.
             </h2>
           </motion.div>
           <motion.div {...fadeUp(0.1)}>

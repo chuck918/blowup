@@ -12,10 +12,9 @@ function fadeUp(delay = 0) {
 }
 
 const benefits = [
-  { label: "Cash prizes", desc: "Win meaningful financial rewards for your hard work and creativity." },
   { label: "Recognition", desc: "Media highlights and professional exposure across platforms." },
   { label: "Networking", desc: "Connect with judges, mentors, sponsors, and ambitious peers." },
-  { label: "Career exposure", desc: "Open doors with industry leaders and recruiters." },
+  { label: "Career exposure", desc: "Open doors with industry leaders and potential employers." },
   { label: "Media publicity", desc: "Get featured on digital channels and news platforms." },
   { label: "Certificate", desc: "All participants receive an official certificate of participation." },
 ];
