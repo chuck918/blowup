@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BlowUp Innovation Challenge",
-  description: "Showcase your ideas, compete for cash prizes, and gain national visibility.",
+  description: "Showcase your ideas, and gain national visibility.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
