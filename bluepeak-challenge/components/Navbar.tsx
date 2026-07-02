@@ -54,7 +54,7 @@ export default function Navbar() {
           rel="noopener"
           className={`hidden md:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-colors ${
             scrolled
-              ? "bg-[#1d4ed8] text-white hover:bg-blue-700"
+              ? "bg-amber-400 text-white hover:bg-amber-300"
               : "bg-white text-gray-900 hover:bg-white/90"
           }`}
         >

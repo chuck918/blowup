@@ -70,7 +70,7 @@ export default function Hero() {
               rel="noopener"
               className="inline-flex items-center gap-2 bg-amber-400 text-gray-900 font-bold px-7 py-3.5 rounded-full text-sm hover:bg-amber-300 transition-colors"
             >
-              Buy Registration Form
+              Blow Up Now
             </a>
             <a
               href="#about"

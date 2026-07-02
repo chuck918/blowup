@@ -36,9 +36,9 @@ export default function WhyJoin() {
               href={PAYSTACK_URL}
               target="_blank"
               rel="noopener"
-              className="inline-flex mt-8 bg-[#1d4ed8] text-white font-semibold text-sm px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
+              className="inline-flex mt-8 bg-amber-400 text-white font-semibold text-sm px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
             >
-              Register now →
+              Blow Up Now →
             </a>
           </motion.div>
 
