@@ -22,12 +22,17 @@ const paymentMethods = ["MTN Mobile Money", "Telecel Cash", "Visa", "Mastercard"
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-white">
-      <div className="container">
+    <section id="pricing" className="py-24 bg-black relative overflow-hidden">
+      {/* Background glow orbs */}
+      <div className="absolute top-1/2 -right-40 bg-glow-orange opacity-35 pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-40 bg-glow-yellow opacity-30 pointer-events-none" />
+
+      <div className="container relative z-10">
         <motion.div {...fadeUp(0)} className="mb-14">
           <p className="eyebrow mb-4">Registration</p>
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
-            One fee.<br/>Everything included.
+          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight uppercase">
+            One fee.<br/>
+            <span className="text-brand-yellow text-glow-yellow">Everything included.</span>
           </h2>
         </motion.div>
 
@@ -35,29 +40,34 @@ export default function Pricing() {
           {/* Main pricing block */}
           <motion.div
             {...fadeUp(0.1)}
-            className="lg:col-span-3 bg-[#1e3a8a] rounded-2xl p-10 text-white"
+            className="lg:col-span-3 bg-gradient-to-br from-[#151515] to-[#0A0A0A] border border-brand-yellow/20 rounded-3xl p-10 relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.6)] group"
           >
-            <div className="flex items-start justify-between mb-8">
+            {/* Hover top border glow */}
+            <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange" />
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8">
               <div>
-                <span className="text-blue-300 text-xs font-semibold uppercase tracking-widest">Registration fee</span>
-                {/* <p className="text-blue-200 text-sm mt-2">One-time · non-refundable</p> */}
+                <span className="text-brand-yellow text-xs font-black uppercase tracking-widest text-glow-yellow">Registration Fee</span>
+                {/* <div className="text-4xl sm:text-5xl font-black text-white mt-2 tracking-tight">
+                  GHS 100
+                </div> */}
               </div>
               <a
                 href={PAYSTACK_URL}
                 target="_blank"
                 rel="noopener"
-                className="bg-amber-400 text-gray-900 font-bold text-sm px-5 py-2.5 rounded-full hover:bg-amber-300 transition-colors shrink-0"
+                className="bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange text-black font-extrabold text-sm px-7 py-3.5 rounded-full hover:brightness-110 shadow-[0_0_15px_rgba(255,230,0,0.25)] hover:shadow-[0_0_25px_rgba(255,230,0,0.45)] hover:-translate-y-0.5 transition-all duration-200 shrink-0 text-center"
               >
                 Register now
               </a>
             </div>
 
             <div className="border-t border-white/10 pt-8">
-              <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-5">What is included</p>
-              <ul className="space-y-3">
+              <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-5">What is included</p>
+              <ul className="grid sm:grid-cols-2 gap-4">
                 {included.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-blue-100">
-                    <svg className="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-300">
+                    <svg className="w-5 h-5 text-brand-yellow shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                     {item}
@@ -70,11 +80,11 @@ export default function Pricing() {
           {/* Side info */}
           <motion.div {...fadeUp(0.15)} className="lg:col-span-2 flex flex-col gap-4">
             {/* Payment methods */}
-            <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100 flex-1">
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-5">Payment methods</p>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex-1">
+              <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-5">Payment methods</p>
               <div className="grid grid-cols-2 gap-2">
                 {paymentMethods.map((method) => (
-                  <div key={method} className="bg-white rounded-xl px-4 py-3 text-sm font-medium text-gray-700 border border-gray-100">
+                  <div key={method} className="bg-white/5 rounded-xl px-4 py-3 text-xs font-bold text-white border border-white/5 hover:border-white/10 transition-colors">
                     {method}
                   </div>
                 ))}
@@ -82,13 +92,13 @@ export default function Pricing() {
             </div>
 
             {/* After payment */}
-            <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">After payment</p>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+              <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4">After payment</p>
               <div className="space-y-3">
-                {["Payment confirmed", "Wait for admission"].map(
+                {["Payment confirmation & validation", "Receive official challenge brief"].map(
                   (step, i) => (
-                    <div key={step} className="flex items-center gap-3 text-sm text-gray-600">
-                      <span className="w-5 h-5 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center text-[10px] font-bold shrink-0">
+                    <div key={step} className="flex items-center gap-3 text-sm text-gray-300">
+                      <span className="w-6 h-6 rounded-full bg-brand-yellow text-black flex items-center justify-center text-xs font-black shrink-0 shadow-[0_0_8px_rgba(255,230,0,0.3)]">
                         {i + 1}
                       </span>
                       {step}
@@ -98,7 +108,7 @@ export default function Pricing() {
               </div>
             </div>
 
-            <p className="text-xs text-gray-400 text-center">Deadline: <strong className="text-gray-600">23rd August 2026</strong></p>
+            <p className="text-xs text-white/40 text-center font-semibold">Deadline: <strong className="text-brand-yellow">23rd August 2026</strong></p>
           </motion.div>
         </div>
       </div>

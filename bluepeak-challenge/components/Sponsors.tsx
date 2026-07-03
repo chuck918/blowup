@@ -17,33 +17,21 @@ const sponsors = [
 
 export default function Sponsors() {
   return (
-    <section id="sponsors" className="py-20 bg-gray-50 border-t border-gray-100">
+    <section id="sponsors" className="py-20 bg-black border-t border-white/10">
       <div className="container">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
           <motion.div {...fadeUp(0)}>
             <p className="eyebrow mb-2">Sponsors &amp; Partners</p>
-            <h2 className="text-2xl font-black text-gray-900">Call us now.</h2>
+            <h2 className="text-2xl font-black text-white uppercase">Become a partner.</h2>
           </motion.div>
           <motion.a
             {...fadeUp(0.1)}
             href="#contact"
-            className="text-sm text-[#1d4ed8] font-semibold hover:underline shrink-0"
+            className="text-sm text-brand-yellow font-extrabold hover:text-brand-orange transition-colors shrink-0"
           >
             Become a sponsor →
           </motion.a>
         </div>
-{/* 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {sponsors.map((s, i) => (
-            <motion.div
-              key={s}
-              {...fadeUp(0.04 * i)}
-              className="bg-white rounded-xl border border-gray-100 h-16 flex items-center justify-center text-sm font-semibold text-gray-500 hover:text-gray-800 hover:border-gray-200 transition-colors"
-            >
-              {s}
-            </motion.div>
-          ))}
-        </div> */}
       </div>
     </section>
   );

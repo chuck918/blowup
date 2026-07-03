@@ -19,12 +19,16 @@ export default function ThankYou() {
   }, [seconds]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-900 to-slate-900 flex items-center justify-center px-6 py-24">
-      <div className="max-w-lg w-full text-center">
+    <main className="min-h-screen bg-black flex items-center justify-center px-6 py-24 relative overflow-hidden">
+      {/* Decorative background glows */}
+      <div className="absolute top-1/4 -left-32 bg-glow-orange opacity-30 pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-32 bg-glow-yellow opacity-25 pointer-events-none" />
+
+      <div className="max-w-lg w-full text-center relative z-10">
         {/* Animated checkmark */}
-        <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-amber-400 flex items-center justify-center shadow-2xl">
+        <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange flex items-center justify-center shadow-[0_0_20px_rgba(255,230,0,0.35)]">
           <svg
-            className="w-10 h-10 text-gray-900"
+            className="w-10 h-10 text-black"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -34,24 +38,24 @@ export default function ThankYou() {
           </svg>
         </div>
 
-        <h1 className="text-4xl font-black text-white mb-3">Payment Confirmed!</h1>
-        <p className="text-blue-200 text-lg mb-8 leading-relaxed">
+        <h1 className="text-4xl font-black text-white mb-3 uppercase tracking-tight">Payment Confirmed!</h1>
+        <p className="text-gray-300 text-lg mb-8 leading-relaxed">
           Thank you for registering for the BlowUp Innovation Challenge.
           <br />
           Your payment has been received successfully.
         </p>
 
         {/* Next steps */}
-        <div className="bg-white/10 border border-white/20 rounded-2xl p-6 mb-8 text-left backdrop-blur">
-          <h2 className="font-bold text-white mb-4 text-center">Next Steps</h2>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 text-left backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+          <h2 className="font-extrabold text-white mb-4 text-center uppercase tracking-wider">Next Steps</h2>
           {[
             "Save your payment reference number",
             "You will be redirected to the application form automatically",
             "Complete all fields accurately",
             "Submit and await our confirmation email",
           ].map((step, i) => (
-            <div key={step} className="flex items-center gap-3 text-sm text-blue-100 mb-3 last:mb-0">
-              <span className="w-6 h-6 bg-amber-400 text-gray-900 font-black rounded-full flex items-center justify-center flex-shrink-0 text-xs">
+            <div key={step} className="flex items-center gap-3 text-sm text-gray-300 mb-3 last:mb-0">
+              <span className="w-6 h-6 bg-brand-yellow text-black font-black rounded-full flex items-center justify-center flex-shrink-0 text-xs shadow-[0_0_8px_rgba(255,230,0,0.2)]">
                 {i + 1}
               </span>
               {step}
@@ -65,22 +69,22 @@ export default function ThankYou() {
             href={FORM_URL}
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center justify-center gap-2 w-full bg-amber-400 text-gray-900 font-black py-4 rounded-2xl text-lg shadow-xl hover:bg-amber-300 transition-colors"
+            className="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange text-black font-extrabold py-4 rounded-2xl text-lg shadow-[0_0_15px_rgba(255,230,0,0.25)] hover:brightness-110 transition-all duration-200"
           >
             Open Application Form →
           </a>
           {seconds > 0 ? (
-            <p className="text-blue-300 text-sm mt-3">
+            <p className="text-gray-400 text-sm mt-3">
               Redirecting automatically in{" "}
-              <span className="font-bold text-amber-400">{seconds}</span> second
+              <span className="font-bold text-brand-yellow text-glow-yellow">{seconds}</span> second
               {seconds !== 1 ? "s" : ""}…
             </p>
           ) : (
-            <p className="text-blue-300 text-sm mt-3">Redirecting now…</p>
+            <p className="text-gray-400 text-sm mt-3">Redirecting now…</p>
           )}
         </div>
 
-        <Link href="/" className="inline-block text-blue-400 text-sm hover:text-white transition-colors">
+        <Link href="/" className="inline-block text-brand-yellow font-extrabold text-sm hover:text-brand-orange transition-colors">
           ← Back to Homepage
         </Link>
       </div>

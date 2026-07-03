@@ -24,23 +24,21 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white border-b border-gray-100" : "bg-transparent"
+        scrolled ? "bg-[#050505]/80 backdrop-blur-md border-b border-white/10" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16">
-        <Link href="/" className={`text-lg font-black tracking-tight transition-colors ${scrolled ? "text-[#1d4ed8]" : "text-white"}`}>
-          Blow<span className={scrolled ? "text-gray-900" : "text-white/70"}>Up</span>
+        <Link href="/" className="flex items-center">
+          <img src="/images/coloured 4.png" alt="BlowUp Logo" className="h-38 w-auto object-contain brightness-110" />
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex gap-8 list-none">
+        <ul className="hidden md:flex gap-8 list-none text-white">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`text-sm font-medium transition-colors ${
-                  scrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"
-                }`}
+                className="link text-sm font-semibold transition-colors text-white/80 hover:text-brand-yellow"
               >
                 {l.label}
               </a>
@@ -52,18 +50,14 @@ export default function Navbar() {
           href={PAYSTACK_URL}
           target="_blank"
           rel="noopener"
-          className={`hidden md:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-colors ${
-            scrolled
-              ? "bg-amber-400 text-white hover:bg-amber-300"
-              : "bg-white text-gray-900 hover:bg-white/90"
-          }`}
+          className="hidden md:inline-flex items-center gap-2 text-sm font-extrabold px-6 py-2.5 rounded-full transition-all bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange text-black hover:brightness-110 shadow-[0_0_15px_rgba(255,230,0,0.25)] hover:shadow-[0_0_25px_rgba(255,230,0,0.45)] hover:-translate-y-0.5 duration-200"
         >
           Register
         </a>
 
         {/* Burger */}
         <button
-          className={`md:hidden p-1 transition-colors ${scrolled ? "text-gray-700" : "text-white"}`}
+          className="md:hidden p-1 transition-colors text-white hover:text-brand-yellow"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -79,13 +73,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-t border-gray-100">
+        <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10">
           <div className="container py-4 flex flex-col gap-1">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 py-2.5 border-b border-gray-50 last:border-0"
+                className="text-sm font-semibold text-white/80 hover:text-brand-yellow py-2.5 border-b border-white/5 last:border-0"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
@@ -95,7 +89,7 @@ export default function Navbar() {
               href={PAYSTACK_URL}
               target="_blank"
               rel="noopener"
-              className="mt-3 text-center bg-[#1d4ed8] text-white font-semibold text-sm px-5 py-3 rounded-full"
+              className="mt-3 text-center font-extrabold text-sm px-5 py-3 rounded-full bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange text-black shadow-[0_0_15px_rgba(255,230,0,0.25)]"
             >
               Register
             </a>

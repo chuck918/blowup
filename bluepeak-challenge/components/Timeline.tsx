@@ -20,15 +20,19 @@ const events = [
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="py-24 bg-gray-50">
-      <div className="container">
+    <section id="timeline" className="py-24 bg-black relative overflow-hidden">
+      {/* Background glow orbs */}
+      <div className="absolute top-1/2 -left-32 bg-glow-orange opacity-25 pointer-events-none" />
+
+      <div className="container relative z-10">
         <div className="grid md:grid-cols-3 gap-16 items-start">
           <motion.div {...fadeUp(0)}>
             <p className="eyebrow mb-4">Timeline</p>
-            <h2 className="text-4xl font-black text-gray-900 leading-tight tracking-tight">
-              Key dates.
+            <h2 className="text-4xl font-black text-white leading-tight tracking-tight uppercase">
+              Key<br />
+              <span className="text-brand-yellow text-glow-yellow">dates.</span>
             </h2>
-            <p className="text-gray-500 text-base mt-4 leading-relaxed">
+            <p className="text-gray-300 text-base mt-4 leading-relaxed">
               Mark your calendar - do not miss any milestone.
             </p>
           </motion.div>
@@ -36,7 +40,7 @@ export default function Timeline() {
           <div className="md:col-span-2">
             <div className="relative">
               {/* Vertical line */}
-              <div className="absolute left-0 top-3 bottom-3 w-px bg-gray-200" />
+              <div className="absolute left-0 top-3 bottom-3 w-px bg-gradient-to-b from-brand-yellow via-brand-orange to-white/10" />
 
               <div className="space-y-0">
                 {events.map((e, i) => (
@@ -47,19 +51,19 @@ export default function Timeline() {
                   >
                     {/* Dot */}
                     <div
-                      className={`absolute left-0 top-1.5 w-[9px] h-[9px] rounded-full -translate-x-[4px] border-2 ${
+                      className={`absolute left-0 top-1.5 w-[9px] h-[9px] rounded-full -translate-x-[4px] border-2 transition-all duration-300 ${
                         e.active
-                          ? "bg-amber-400 border-amber-400"
-                          : "bg-white border-gray-300"
+                          ? "bg-brand-orange border-brand-orange shadow-[0_0_8px_rgba(255,94,0,0.8)] scale-125"
+                          : "bg-black border-white/20"
                       }`}
                     />
 
                     <div>
-                      <span className="text-xs font-bold text-[#1d4ed8] uppercase tracking-wider">
+                      <span className={`text-xs font-black uppercase tracking-wider ${e.active ? "text-brand-orange text-glow-orange" : "text-brand-yellow/60"}`}>
                         {e.date}
                       </span>
-                      <h3 className="font-bold text-gray-900 text-base mt-1 mb-0.5">{e.label}</h3>
-                      <p className="text-gray-500 text-sm">{e.desc}</p>
+                      <h3 className="font-extrabold text-white text-base mt-1 mb-0.5">{e.label}</h3>
+                      <p className="text-gray-400 text-sm">{e.desc}</p>
                     </div>
                   </motion.div>
                 ))}
