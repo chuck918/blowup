@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40 font-semibold">
-          <span>© {new Date().getFullYear()} BlowUp Innovation Challenge. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} BlowUp. All rights reserved.</span>
           <span>Designed and Built by <a href="https://www.instagram.com/nazir360_/" target="_blank" rel="noopener noreferrer" className="link hover:text-brand-yellow transition-colors">Nazir</a></span>
         </div>
       </div>

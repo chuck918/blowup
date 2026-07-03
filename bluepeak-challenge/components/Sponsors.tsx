@@ -27,7 +27,7 @@ export default function Sponsors() {
           <motion.a
             {...fadeUp(0.1)}
             href="#contact"
-            className="text-sm text-brand-yellow font-extrabold hover:text-brand-orange transition-colors shrink-0"
+            className="link text-sm text-brand-yellow font-extrabold hover:text-brand-orange transition-colors shrink-0"
           >
             Become a sponsor →
           </motion.a>
