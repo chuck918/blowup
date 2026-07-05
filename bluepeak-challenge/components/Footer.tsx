@@ -21,7 +21,7 @@ export default function Footer() {
               <img src="/images/coloured 4.png" alt="BlowUp Logo" className="h-38 w-auto object-contain  hover:brightness-100 transition-all duration-300" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs font-medium">
-              Blowing up Hits
+              Blowing up the next hits!
             </p>
             <a
               href={PAYSTACK_URL}

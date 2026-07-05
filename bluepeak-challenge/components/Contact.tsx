@@ -53,7 +53,7 @@ export default function Contact() {
               <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange" />
               
               <p className="text-brand-yellow text-sm font-bold uppercase tracking-wider mb-4 text-glow-yellow">Ready to compete?</p>
-              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">BlowUp Ghanas next big creators</h3>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Blowing up the next hits!</h3>
               
               <a
                 href={PAYSTACK_URL}

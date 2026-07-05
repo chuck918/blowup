@@ -14,7 +14,7 @@ function fadeUp(delay = 0) {
 const included = [
   "Official entry into the competition",
   // "Contestant profile submission",
-  "Eligibility to compete in your selected category",
+  // "Eligibility to compete in your selected category",
   // "Certificate of participation",
 ];
 

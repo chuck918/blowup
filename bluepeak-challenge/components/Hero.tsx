@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-xl mb-10 border-l-2 border-brand-yellow pl-4">
-            A national platform for bold ideas - open to film directors, musicians, beat programmers, and sound engineers across Ghana.
+             A platform for board ideas. Open to creatives.
           </p>
 
           <div className="flex flex-wrap gap-4 text-white">
