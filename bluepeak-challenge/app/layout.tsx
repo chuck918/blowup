@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "Showcase your ideas, and gain national visibility.",
     images: [
       {
-        url: "/images/coloured 4.png",
+        url: "https://theblowup.vercel.app/",
         width: 1200,
         height: 630,
         alt: "The BlowUp Logo",
