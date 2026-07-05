@@ -13,9 +13,9 @@ function fadeUp(delay = 0) {
 
 const included = [
   "Official entry into the competition",
-  "Contestant profile submission",
+  // "Contestant profile submission",
   "Eligibility to compete in your selected category",
-  "Certificate of participation",
+  // "Certificate of participation",
 ];
 
 const paymentMethods = ["MTN Mobile Money", "Telecel Cash", "Visa", "Mastercard", "Airtel Tigo Money"];

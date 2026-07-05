@@ -16,7 +16,7 @@ const benefits = [
   { label: "Networking", desc: "Connect with judges, mentors, sponsors, and ambitious peers." },
   { label: "Career exposure", desc: "Open doors with industry leaders and potential employers." },
   { label: "Media publicity", desc: "Get featured on digital channels and news platforms." },
-  { label: "Certificate", desc: "All participants receive an official certificate of participation." },
+  // { label: "Certificate", desc: "All participants receive an official certificate of participation." },
 ];
 
 export default function WhyJoin() {

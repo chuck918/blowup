@@ -21,7 +21,7 @@ export default function Footer() {
               <img src="/images/coloured 4.png" alt="BlowUp Logo" className="h-38 w-auto object-contain  hover:brightness-100 transition-all duration-300" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs font-medium">
-              Showcasing bold ideas and rewarding excellence across Ghana and beyond.
+              Blowing up Hits
             </p>
             <a
               href={PAYSTACK_URL}
@@ -59,7 +59,7 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40 font-semibold">
           <span>© {new Date().getFullYear()} BlowUp. All rights reserved.</span>
-          <span>Designed and Built by <a href="https://www.instagram.com/nazir360_/" target="_blank" rel="noopener noreferrer" className="link hover:text-brand-yellow transition-colors">Nazir</a></span>
+          {/* <span>Designed and Built by <a href="https://www.instagram.com/nazir360_/" target="_blank" rel="noopener noreferrer" className="link hover:text-brand-yellow transition-colors">Nazir</a></span> */}
         </div>
       </div>
     </footer>

@@ -69,7 +69,7 @@ export default function Contact() {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-7 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
               <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4">Follow us</p>
               <div className="flex flex-wrap gap-2">
-                {["Twitter / X", "Facebook", "Instagram", "YouTube"].map((s) => (
+                {["TikTok"].map((s) => (
                   <a
                     key={s}
                     href="#"
