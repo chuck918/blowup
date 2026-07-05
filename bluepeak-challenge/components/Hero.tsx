@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-xl mb-10 border-l-2 border-brand-yellow pl-4">
-             A platform for board ideas. Open to creatives.
+             A platform for bold ideas. Open to creatives.
           </p>
 
           <div className="flex flex-wrap gap-4 text-white">

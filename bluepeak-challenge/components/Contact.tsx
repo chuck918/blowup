@@ -69,13 +69,17 @@ export default function Contact() {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-7 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
               <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4">Follow us</p>
               <div className="flex flex-wrap gap-2">
-                {["TikTok"].map((s) => (
+                {[
+                  { name: "TikTok", href: "https://www.tiktok.com/@skaddy_hackson?is_from_webapp=1&sender_device=pc" }
+                ].map((s) => (
                   <a
-                    key={s}
-                    href="#"
+                    key={s.name}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="link text-sm font-bold text-gray-300 hover:text-brand-yellow bg-white/5 border border-white/5 px-4 py-2 rounded-full transition-all hover:border-brand-yellow/20"
                   >
-                    {s}
+                    {s.name}
                   </a>
                 ))}
               </div>
