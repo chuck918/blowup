@@ -23,7 +23,9 @@ export default function Hero() {
   const [time, setTime] = useState(() => getTimeLeft(DEADLINE));
 
   useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft(DEADLINE)), 1000);
+    const updateTime = () => setTime(getTimeLeft(DEADLINE));
+    updateTime();
+    const id = setInterval(updateTime, 1000);
     return () => clearInterval(id);
   }, []);
 
