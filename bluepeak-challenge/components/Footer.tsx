@@ -27,7 +27,7 @@ export default function Footer() {
               href={PAYSTACK_URL}
               target="_blank"
               rel="noopener"
-              className="inline-flex mt-6 bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-orange text-black font-extrabold text-sm px-6 py-2.5 rounded-full hover:brightness-110 shadow-[0_0_12px_rgba(255,230,0,0.2)] transition-all duration-200"
+              className="inline-flex mt-6 bg-linear-to-r from-brand-yellow via-brand-gold to-brand-orange text-black font-extrabold text-sm px-6 py-2.5 rounded-full hover:brightness-110 shadow-[0_0_12px_rgba(255,230,0,0.2)] transition-all duration-200"
             >
               Register
             </a>

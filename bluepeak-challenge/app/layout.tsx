@@ -13,8 +13,11 @@ const dancingScript = Dancing_Script({
   weight: ["400", "700"],
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const LOGO_URL = `${SITE_URL}/images/coloured 4.png`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.theblowupgh.com"),
+  metadataBase: new URL(SITE_URL),
   title: "The BlowUp",
   description: "Showcase your ideas, and gain national visibility.",
   keywords: ["innovation", "challenge", "startup", "competition", "national visibility"],
@@ -23,20 +26,20 @@ export const metadata: Metadata = {
     description: "Showcase your ideas, and gain national visibility.",
     images: [
       {
-        url: "/images/coloured%204.png",
+        url: LOGO_URL,
         width: 1200,
         height: 630,
         alt: "The BlowUp Logo",
       },
       {
-        url: "/images/coloured%204.png",
+        url: LOGO_URL,
         width: 600,
         height: 600,
         alt: "The BlowUp Logo (mobile)",
       },
     ],
     type: "website",
-    locale: "en_US",    
+    locale: "en_US",
     siteName: "The BlowUp",
   },
   twitter: {
@@ -44,12 +47,12 @@ export const metadata: Metadata = {
     title: "The BlowUp",
     description: "Showcase your ideas, and gain national visibility.",
     site: "@theblowup",
-    images: ["/images/coloured%204.png", "/images/coloured%204.png"],
+    images: [LOGO_URL],
   },
   icons: {
     icon: "/images/coloured 4.png",
-     shortcut: '/images/coloured 4.png',
-    apple: '/images/coloured 4.png',
+    shortcut: "/images/coloured 4.png",
+    apple: "/images/coloured 4.png",
   },
 
 };
