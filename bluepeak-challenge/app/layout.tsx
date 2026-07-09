@@ -14,6 +14,7 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.theblowupgh.com"),
   title: "The BlowUp",
   description: "Showcase your ideas, and gain national visibility.",
   keywords: ["innovation", "challenge", "startup", "competition", "national visibility"],
