@@ -22,14 +22,20 @@ export const metadata: Metadata = {
     description: "Showcase your ideas, and gain national visibility.",
     images: [
       {
-        url: "https://theblowup.vercel.app/",
+        url: "/images/coloured%204.png",
         width: 1200,
         height: 630,
         alt: "The BlowUp Logo",
       },
+      {
+        url: "/images/coloured%204.png",
+        width: 600,
+        height: 600,
+        alt: "The BlowUp Logo (mobile)",
+      },
     ],
     type: "website",
-    locale: "en_US",
+    locale: "en_US",    
     siteName: "The BlowUp",
   },
   twitter: {
@@ -37,6 +43,7 @@ export const metadata: Metadata = {
     title: "The BlowUp",
     description: "Showcase your ideas, and gain national visibility.",
     site: "@theblowup",
+    images: ["/images/coloured%204.png", "/images/coloured%204.png"],
   },
   icons: {
     icon: "/images/coloured 4.png",
