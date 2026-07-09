@@ -34,6 +34,8 @@ export default function Contact() {
               {[
                 { label: "WhatsApp", value: "+233 59 267 4427", href: "https://wa.me/233592674427" },
                 { label: "Phone", value: "+233 59 267 4427", href: "tel:+233592674427" },
+                { label: "Email", value: "info@theblowupgh.com", href: "mailto:info@theblowupgh.com" },
+                
               ].map((c) => (
                 <div key={c.label} className="border-b border-white/10 pb-5">
                   <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-1">{c.label}</p>
