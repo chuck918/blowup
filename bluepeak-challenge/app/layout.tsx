@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       {
         url: LOGO_URL,
         width: 1200,
-        height: 630,
+        height: 1230,
         alt: "The BlowUp Logo",
       },
       {
