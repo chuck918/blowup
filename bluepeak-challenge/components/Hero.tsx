@@ -57,7 +57,10 @@ export default function Hero() {
       {/* Hero body */}
       <div className="container flex-1 flex flex-col justify-center py-24 relative z-10">
         <div className="max-w-3xl">
-          {/* <p className="eyebrow mb-6">BlowUp Innovation Challenge</p> */}
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-sm">
+            <img src="/images/logo.png" alt="The BlowUp Logo" className="h-6 w-auto object-contain brightness-110" />
+            <span className="text-xs font-extrabold uppercase tracking-widest text-brand-yellow">The BlowUp Innovation Challenge</span>
+          </div>
 
           <div className="relative mb-12">
             <h1 className="text-6xl sm:text-7xl md:text-8.5xl font-black text-white leading-none tracking-tighter select-none">

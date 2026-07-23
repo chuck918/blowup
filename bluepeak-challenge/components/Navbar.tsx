@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-16">
         <Link href="/" className="flex items-center">
-          <img src="/images/coloured 4.png" alt="BlowUp Logo" className="h-38 w-auto object-contain brightness-110" />
+          <img src="/images/logo.png" alt="BlowUp Logo" className="h-38 w-auto object-contain brightness-110" />
         </Link>
 
         {/* Desktop links */}
