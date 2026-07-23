@@ -59,9 +59,85 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      "name": "The BlowUp",
+      "url": SITE_URL,
+      "logo": LOGO_URL,
+      "description": "The BlowUp Innovation Challenge uncovers bold ideas, rewards excellence, and creates meaningful opportunities for participants across Ghana and beyond."
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      "name": "The BlowUp",
+      "publisher": { "@id": `${SITE_URL}/#organization` }
+    },
+    {
+      "@type": "Event",
+      "@id": `${SITE_URL}/#event`,
+      "name": "The BlowUp Innovation Challenge 2026",
+      "description": "National innovation and creative competition uncovering bold ideas and rewarding excellence across Ghana and beyond.",
+      "url": SITE_URL,
+      "endDate": "2026-08-23",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Ghana",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "GH"
+        }
+      },
+      "organizer": { "@id": `${SITE_URL}/#organization` }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who can apply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anyone passionate about innovation, creativity, or impact-based projects. Open to individuals and teams."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are winners selected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A panel of judges evaluates entries on creativity, impact, presentation, and originality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can teams apply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — both individuals and teams are welcome. One member should be designated as the primary applicant."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${dancingScript.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
