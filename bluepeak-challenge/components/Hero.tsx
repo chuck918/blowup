@@ -57,10 +57,10 @@ export default function Hero() {
       {/* Hero body */}
       <div className="container flex-1 flex flex-col justify-center py-24 relative z-10">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-sm">
+          {/* <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-sm">
             <img src="/images/logo.png" alt="The BlowUp Logo" className="h-6 w-auto object-contain brightness-110" />
             <span className="text-xs font-extrabold uppercase tracking-widest text-brand-yellow">The BlowUp Innovation Challenge</span>
-          </div>
+          </div> */}
 
           <div className="relative mb-12">
             <h1 className="text-6xl sm:text-7xl md:text-8.5xl font-black text-white leading-none tracking-tighter select-none">
@@ -106,14 +106,14 @@ export default function Hero() {
               <div className="text-white/40 text-xs mt-0.5 font-bold uppercase tracking-wider">Categories</div>
             </div>
             <div className="w-px h-8 bg-white/10" />
-            <div>
+            {/* <div>
               <div className="text-2xl font-black text-brand-yellow text-glow-yellow">Aug 23</div>
               <div className="text-white/40 text-xs mt-0.5 font-bold uppercase tracking-wider">Deadline 2026</div>
-            </div>
+            </div> */}
           </div>
 
           {/* Countdown */}
-          <div className="flex items-center gap-1.5" suppressHydrationWarning>
+          {/* <div className="flex items-center gap-1.5" suppressHydrationWarning>
             {units.map(({ label, value }, i) => (
               <div key={label} className="flex items-center gap-1.5">
                 <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-center min-w-16 backdrop-blur-sm shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
@@ -127,7 +127,7 @@ export default function Hero() {
                 )}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
