@@ -17,7 +17,7 @@ function getTimeLeft(target: Date) {
   };
 }
 
-const DEADLINE = new Date("2026-08-23T23:59:59");
+const DEADLINE = new Date("2027-07-23T23:59:59");
 
 export default function Hero() {
   const [time, setTime] = useState(() => getTimeLeft(DEADLINE));
@@ -106,14 +106,14 @@ export default function Hero() {
               <div className="text-white/40 text-xs mt-0.5 font-bold uppercase tracking-wider">Categories</div>
             </div>
             <div className="w-px h-8 bg-white/10" />
-            {/* <div>
-              <div className="text-2xl font-black text-brand-yellow text-glow-yellow">Aug 23</div>
-              <div className="text-white/40 text-xs mt-0.5 font-bold uppercase tracking-wider">Deadline 2026</div>
-            </div> */}
+            <div>
+              <div className="text-2xl font-black text-brand-yellow text-glow-yellow">Jul 23</div>
+              <div className="text-white/40 text-xs mt-0.5 font-bold uppercase tracking-wider">Deadline 2027</div>
+            </div>
           </div>
 
           {/* Countdown */}
-          {/* <div className="flex items-center gap-1.5" suppressHydrationWarning>
+           <div className="flex items-center gap-1.5" suppressHydrationWarning>
             {units.map(({ label, value }, i) => (
               <div key={label} className="flex items-center gap-1.5">
                 <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-center min-w-16 backdrop-blur-sm shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
@@ -127,7 +127,7 @@ export default function Hero() {
                 )}
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
     </section>
