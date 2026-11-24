@@ -1,281 +1,170 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import SiteHeader from "@/components/site/SiteHeader";
+import SiteFooter from "@/components/site/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — BlowUp Innovation Challenge",
-  description:
-    "How BlowUp Innovation Challenge collects, uses, and protects your personal information.",
+  title: "Privacy Policy",
+  description: "How The BlowUp collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Top bar */}
-      <header className="border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur z-50">
-        <div className="container flex items-center justify-between py-4">
-          <Link href="/" className="text-xl font-black tracking-tight">
-            Blow<span style={{ color: "var(--blue)" }}>Up</span>
-            <span className="text-amber-400">.</span>
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            ← Back to site
-          </Link>
-        </div>
-      </header>
+    <>
+      <SiteHeader />
+      <main className="pt-36 pb-24">
+        <div className="container max-w-3xl">
+          <p className="eyebrow mb-5">Legal</p>
+          <h1 className="display text-6xl sm:text-7xl">Privacy Policy</h1>
+          <p className="mt-4 text-sm text-subtle">Effective date: 24 November 2026</p>
+          <article className="prose-dark mt-12">
+            <p>
+              The BlowUp (“<strong>BlowUp</strong>”, “<strong>we</strong>”, “<strong>us</strong>”, or
+              “<strong>our</strong>”) is committed to protecting the privacy of everyone who visits our website,
+              creates an account, registers for our masterclass or buys event tickets. This Privacy Policy
+              explains what information we collect, how we use it, and your rights in relation to it.
+            </p>
 
-      <main className="container py-20">
-        {/* Hero */}
-        <div className="max-w-3xl mb-16">
-          <span className="eyebrow mb-4">Legal</span>
-          <h1 className="text-5xl font-black tracking-tight text-gray-900 mt-2 mb-4">
-            Privacy Policy
-          </h1>
-          <p className="text-gray-500 text-sm">
-            Effective date: <strong>1 July 2026</strong>
-          </p>
-        </div>
-
-        {/* Content */}
-        <article className="prose max-w-3xl" style={{ color: "var(--ink)" }}>
-          <p className="text-gray-600 leading-relaxed text-lg">
-            BlowUp Innovation Challenge ("<strong>BlowUp</strong>", "
-            <strong>we</strong>", "<strong>us</strong>", or "
-            <strong>our</strong>") is committed to protecting the privacy of
-            everyone who visits our website or registers for the competition. This
-            Privacy Policy explains what information we collect, how we use it, and
-            your rights in relation to it.
-          </p>
-
-          <Section title="1. Information We Collect">
-            <p>We may collect the following categories of personal data:</p>
+            <h2>1. Information we collect</h2>
             <ul>
               <li>
-                <strong>Registration data</strong> — name, email address, phone
-                number, institution or organisation, and any other information you
-                provide when completing our registration form or payment.
+                <strong>Account data</strong> — your name, email address and/or phone number, and a password if
+                you sign up with email. If you sign in with Google, we receive your name and email address from
+                Google. If you sign in with your phone, we send a one-time code by SMS.
               </li>
               <li>
-                <strong>Project/submission data</strong> — pitch decks,
-                descriptions, videos, or any materials you submit as part of the
-                competition.
+                <strong>Registration data</strong> — the track you choose, your full name, stage or brand name,
+                phone number, city, a short description of yourself and your work, and any portfolio link you
+                provide.
               </li>
               <li>
-                <strong>Payment data</strong> — transaction references processed
-                through Paystack. We do not store raw card numbers or bank account
-                credentials.
+                <strong>Ticket data</strong> — the events and tickets you buy, your order history, and when each
+                ticket is checked in at the door.
               </li>
               <li>
-                <strong>Usage data</strong> — pages visited, browser type, device
-                type, IP address, and referring URL, collected automatically via
-                cookies and similar technologies.
+                <strong>Payment data</strong> — payment references and amounts processed through Paystack. We do
+                not see or store card numbers or Mobile Money PINs.
               </li>
               <li>
-                <strong>Communications</strong> — any messages you send us via
-                email or the contact form on our website.
+                <strong>Technical data</strong> — information your browser sends when you visit (such as IP
+                address and browser type), used to keep the service secure and working.
+              </li>
+              <li>
+                <strong>Communications</strong> — any messages you send us by email, phone or WhatsApp.
               </li>
             </ul>
-          </Section>
 
-          <Section title="2. How We Use Your Information">
-            <p>We use the data we collect to:</p>
+            <h2>2. How we use your information</h2>
             <ul>
-              <li>Process and manage your competition registration and payment.</li>
+              <li>Create and secure your account, and let you sign in.</li>
+              <li>Process your masterclass registration and payment, and confirm your place.</li>
+              <li>Issue event tickets, show them in your dashboard, and check them in at the door.</li>
+              <li>Contact you about sessions, schedules, venues and changes to events you are part of.</li>
+              <li>Plan and tailor masterclass sessions to participants’ experience and interests.</li>
               <li>
-                Communicate with you about the competition schedule, results, and
-                prize disbursement.
+                Where you have given consent, feature participants and their work in our promotional
+                materials.
               </li>
-              <li>
-                Verify eligibility and ensure compliance with competition rules.
-              </li>
-              <li>
-                Promote the competition and, where you have given consent, feature
-                participants and their projects in our marketing materials.
-              </li>
-              <li>Improve our website and understand how visitors use it.</li>
-              <li>Comply with legal obligations.</li>
+              <li>Keep the website secure, prevent fraud, and comply with legal obligations.</li>
             </ul>
-          </Section>
 
-          <Section title="3. Legal Basis for Processing">
-            <p>
-              We process your personal data on one or more of the following legal
-              bases:
-            </p>
+            <h2>3. Legal basis for processing</h2>
             <ul>
               <li>
-                <strong>Contract</strong> — processing is necessary to fulfil our
-                obligations to you as a registered participant.
+                <strong>Contract</strong> — processing is necessary to provide your account, masterclass place or
+                tickets.
               </li>
               <li>
-                <strong>Legitimate interests</strong> — to operate and promote the
-                competition, provided your rights are not overridden.
+                <strong>Legitimate interests</strong> — to operate, secure and improve our services, provided your
+                rights are not overridden.
               </li>
               <li>
-                <strong>Consent</strong> — where you have explicitly agreed to
-                receive marketing communications or for your image/work to be
-                featured.
+                <strong>Consent</strong> — where you have agreed to receive marketing or for your image or work to
+                be featured.
               </li>
               <li>
-                <strong>Legal obligation</strong> — where we are required to retain
-                records by law.
+                <strong>Legal obligation</strong> — where we are required to keep records by law.
               </li>
             </ul>
-          </Section>
 
-          <Section title="4. Sharing Your Information">
-            <p>
-              We do not sell or rent your personal data. We may share it with:
-            </p>
+            <h2>4. Sharing your information</h2>
+            <p>We do not sell or rent your personal data. We share it only with:</p>
             <ul>
               <li>
-                <strong>Service providers</strong> — such as Paystack (payment
-                processing) and Google (form collection, analytics), who are bound
-                by confidentiality obligations.
+                <strong>Service providers</strong> who help us run the website, bound by confidentiality
+                obligations: Paystack (payments), Supabase (database, sign-in and file storage), our website
+                hosting provider, Google (only if you choose to sign in with Google), and our SMS provider (only
+                if you sign in with your phone number).
               </li>
               <li>
-                <strong>Sponsors and partners</strong> — only aggregate, anonymised
-                data or, with your explicit consent, your name and institution for
-                prize announcements.
+                <strong>Facilitators and partners</strong> — only the information needed to run sessions (such
+                as your name and track), or aggregate, anonymised data.
               </li>
               <li>
-                <strong>Authorities</strong> — where required by law or to protect
-                our legal rights.
+                <strong>Authorities</strong> — where required by law or to protect our legal rights.
               </li>
             </ul>
-          </Section>
 
-          <Section title="5. Data Retention">
+            <h2>5. Data retention</h2>
             <p>
-              We retain personal data for as long as necessary to fulfil the
-              purposes described in this policy, or as required by law. Registration
-              data is typically retained for 12 months after the conclusion of each
-              competition cycle, after which it is securely deleted or anonymised.
+              We keep your account data for as long as your account is open. Registration and ticket data is
+              typically retained for 12 months after the end of each masterclass season or event, after which it
+              is securely deleted or anonymised, unless we must keep it longer by law (for example, payment
+              records).
             </p>
-          </Section>
 
-          <Section title="6. Cookies">
+            <h2>6. Cookies</h2>
             <p>
-              Our website uses cookies and similar tracking technologies to improve
-              your browsing experience and gather analytics. You may disable cookies
-              through your browser settings; however, some features of the site may
-              not function correctly without them.
+              We use essential cookies to keep you signed in and to protect your account. These are required for
+              the website to work. We do not use advertising cookies. If we add analytics in future, we will
+              update this policy.
             </p>
-          </Section>
 
-          <Section title="7. Your Rights">
-            <p>
-              Depending on your jurisdiction, you may have the right to:
-            </p>
+            <h2>7. Your rights</h2>
+            <p>Depending on your jurisdiction, you may have the right to:</p>
             <ul>
               <li>Access the personal data we hold about you.</li>
-              <li>Request correction of inaccurate data.</li>
-              <li>
-                Request erasure of your data, where no overriding legal obligation
-                prevents this.
-              </li>
+              <li>Correct inaccurate data — you can update most details from your dashboard.</li>
+              <li>Request deletion of your data, where no legal obligation prevents this.</li>
               <li>Object to or restrict processing in certain circumstances.</li>
-              <li>
-                Withdraw consent at any time (without affecting the lawfulness of
-                prior processing).
-              </li>
+              <li>Withdraw consent at any time (without affecting the lawfulness of prior processing).</li>
             </ul>
             <p>
-              To exercise any of these rights, please contact us at{" "}
-              <a
-                href="mailto:blowupofficial0@gmail.com"
-                style={{ color: "var(--blue)" }}
-              >
-                blowupofficial0@gmail.com
-              </a>
-              .
+              To exercise any of these rights, contact us at{" "}
+              <a href="mailto:info@theblowupgh.com">info@theblowupgh.com</a>.
             </p>
-          </Section>
 
-          <Section title="8. Security">
+            <h2>8. Security</h2>
             <p>
-              We implement reasonable technical and organisational measures to
-              protect your personal data against unauthorised access, loss, or
-              disclosure. However, no internet transmission is entirely secure and
-              we cannot guarantee absolute security.
+              We use reasonable technical and organisational measures to protect your personal data, including
+              encrypted connections and access controls that limit each user to their own data. However, no
+              internet transmission is entirely secure and we cannot guarantee absolute security.
             </p>
-          </Section>
 
-          <Section title="9. Third-Party Links">
+            <h2>9. Third-party links</h2>
             <p>
-              Our website may link to third-party websites. We are not responsible
-              for the privacy practices of those sites and encourage you to review
-              their respective privacy policies.
+              Our website may link to third-party websites. We are not responsible for the privacy practices of
+              those sites and encourage you to review their privacy policies.
             </p>
-          </Section>
 
-          <Section title="10. Changes to This Policy">
+            <h2>10. Changes to this policy</h2>
             <p>
-              We may update this Privacy Policy from time to time. The effective
-              date at the top of this page will reflect the date of the most recent
-              revision. Continued use of the site after changes are posted
+              We may update this Privacy Policy from time to time. The effective date at the top of this page
+              will reflect the most recent revision. Continued use of the site after changes are posted
               constitutes acceptance of the updated policy.
             </p>
-          </Section>
 
-          <Section title="11. Contact Us">
-            <p>
-              If you have any questions about this Privacy Policy, please reach out:
-            </p>
+            <h2>11. Contact us</h2>
+            <p>If you have any questions about this Privacy Policy, please reach out:</p>
             <ul>
               <li>
-                Email:{" "}
-                <a
-                  href="mailto:blowupofficial0@gmail.com"
-                  style={{ color: "var(--blue)" }}
-                >
-                  blowupofficial0@gmail.com
-                </a>
+                Email: <a href="mailto:info@theblowupgh.com">info@theblowupgh.com</a>
               </li>
-              <li>Phone: +233 531 494 754</li>
+              <li>Phone: +233 59 267 4427</li>
             </ul>
-          </Section>
-        </article>
-      </main>
-
-      {/* Minimal footer */}
-      <footer className="border-t border-gray-100 mt-20">
-        <div className="container py-8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-gray-400">
-          <span>© {new Date().getFullYear()} BlowUp Innovation Challenge.</span>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-gray-700 transition-colors font-medium" style={{ color: "var(--blue)" }}>
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-gray-700 transition-colors">
-              Terms &amp; Conditions
-            </Link>
-          </div>
+          </article>
         </div>
-      </footer>
-    </div>
-  );
-}
-
-function Section({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="mt-12">
-      <h2
-        className="text-xl font-black mb-4"
-        style={{ color: "var(--ink)", letterSpacing: "-0.02em" }}
-      >
-        {title}
-      </h2>
-      <div className="text-gray-600 leading-relaxed space-y-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_strong]:text-gray-900">
-        {children}
-      </div>
-    </section>
+      </main>
+      <SiteFooter />
+    </>
   );
 }

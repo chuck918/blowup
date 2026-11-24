@@ -1,29 +1,27 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import HowItWorks from "@/components/HowItWorks";
-import Pricing from "@/components/Pricing";
-import WhyJoin from "@/components/WhyJoin";
-import FAQ from "@/components/FAQ";
-import Sponsors from "@/components/Sponsors";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import SiteHeader from "@/components/site/SiteHeader";
+import SiteFooter from "@/components/site/SiteFooter";
+import Hero from "@/components/home/Hero";
+import Marquee from "@/components/home/Marquee";
+import Categories from "@/components/home/Categories";
+import UpcomingEvents from "@/components/home/UpcomingEvents";
+import HowItWorks from "@/components/home/HowItWorks";
+import FAQ from "@/components/home/FAQ";
+import Contact from "@/components/home/Contact";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <SiteHeader />
       <main>
         <Hero />
-        <About />
+        <Marquee />
+        <Categories />
+        <UpcomingEvents />
         <HowItWorks />
-        <Pricing />
-        <WhyJoin />
         <FAQ />
-        <Sponsors />
         <Contact />
       </main>
-      <Footer />
+      <SiteFooter />
     </>
   );
 }
